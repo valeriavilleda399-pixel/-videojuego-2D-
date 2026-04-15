@@ -1,0 +1,85 @@
+/* --- Estilos Globales --- */
+body {
+    background-color: #0b0d17; /* Fondo oscuro espacial */
+    background-image: url('assets/fondo2.jpg'); /* Regla 4: Imagen de fondo temática */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Canvas y Puntero (Regla 5) --- */
+#canvas {
+    /* Puntero personalizado: se usa 'crosshair' como respaldo si no carga la imagen */
+    cursor: url('assets/aim.png') 16 16, crosshair; 
+    background-color: rgba(5, 5, 16, 0.8); /* Fondo semi-transparente para ver el bg */
+    border: 2px solid #00ffff; /* Brillo neón cian */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* --- Layout y Secciones (Regla 7) --- */
+header {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border-bottom: 2px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    border-top: 1px solid #333;
+    padding: 15px 0;
+    margin-top: auto;
+}
+
+/* --- Aside: Instrucciones y Contador (Regla 6 y 8) --- */
+aside {
+    background-color: rgba(20, 20, 40, 0.85);
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+}
+
+.score-title {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#contador {
+    color: #00ffcc;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 10px #00ffcc;
+    font-weight: bold;
+}
+
+/* --- Elementos de Interfaz --- */
+h1, h5 {
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+hr {
+    border-color: #007bff;
+    opacity: 0.5;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+    aside {
+        margin-bottom: 20px;
+    }
+    
+    #canvas {
+        width: 100%;
+    }
+}
